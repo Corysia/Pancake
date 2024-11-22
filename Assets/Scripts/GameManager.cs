@@ -2,34 +2,31 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager _instance = null;
+    private static GameManager _instance;
 
-    [SerializeField, Header("VR")] public bool _inVR = false;
-    [SerializeField] public bool _vrCapable = false;
+    [ShowOnly, Header("VR")] public bool inVR;
+    [ShowOnly] public bool vrCapable;
 
-    public static GameManager Instance
+    public static GameManager instance
     {
         get
         {
-            if (_instance == null)
-            {
-                _instance = GameObject.FindAnyObjectByType<GameManager>();
-            }
+            if (_instance == null) _instance = FindAnyObjectByType<GameManager>();
             return _instance;
         }
     }
 
-    void Awake()
+    private void Awake()
     {
         if (_instance == null)
         {
             _instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Debug.Log("GameManagerInstance already exists, destroying object!");
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
-    } 
+    }
 }
