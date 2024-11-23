@@ -125,7 +125,7 @@ public class DetectVR : MonoBehaviour
     /// <summary>
     /// Switches from the VR camera to the desktop camera.
     /// </summary>
-    ContextMenu("Switch to Desktop Camera")
+    [ContextMenu("Switch to Desktop Camera")]
     private void SwitchToDesktopCamera()
     {
         // Set the desktop camera's scale to the same as the XR origin's scale.
@@ -144,7 +144,7 @@ public class DetectVR : MonoBehaviour
     /// <summary>
     /// Switches from the desktop camera to the VR camera.
     /// </summary>
-    ContextMenu("Switch to VR Camera")
+    [ContextMenu("Switch to VR Camera")]
     private void SwitchToVRCamera()
     {
         EnableVRCamera();
