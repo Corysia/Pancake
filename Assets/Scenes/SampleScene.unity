@@ -151,9 +151,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 047d95743cd7f40a5b725ff1680eeaff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boost: 3.5
+  boost: 1
   positionLerpTime: 0.2
-  mouseSensitivity: 60
+  mouseSensitivity: 300
   mouseSensitivityCurve:
     serializedVersion: 2
     m_Curve:
@@ -179,7 +179,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   rotationLerpTime: 0.01
-  invertY: 0
+  invertY: 1
 --- !u!114 &65181397
 MonoBehaviour:
   m_ObjectHideFlags: 0
